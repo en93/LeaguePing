@@ -32,14 +32,21 @@ namespace LeaguePing
             ipDictionary = GetIPDictionary();
             textBlockDictionary = GetTextBlockDictionary();
 
-            foreach (KeyValuePair<string, string> server in ipDictionary)
+            GetPing(ipDictionary, textBlockDictionary);
+
+
+        }
+
+        private void GetPing(Dictionary<string, string> ip, Dictionary<string, TextBlock> textViews)
+        {
+            foreach (KeyValuePair<string, string> server in ip)
             {
                 Ping ping = new Ping();
                 PingReply reply = ping.Send(server.Value); //todo consider getting an average rather than single value
                 string rtt;
                 if (reply.Status.ToString() == "Success")
                 {
-                    int time = (int)reply.RoundtripTime; //todo round to ceiling 
+                    int time = (int) reply.RoundtripTime; //todo round to ceiling 
                     rtt = time.ToString();
                 }
                 else
@@ -47,12 +54,9 @@ namespace LeaguePing
                     rtt = "No response";
                 }
                 TextBlock textBlock;
-                textBlockDictionary.TryGetValue(server.Key, out textBlock);
+                textViews.TryGetValue(server.Key, out textBlock);
                 textBlock.Text = rtt;
-
             }
-
-
         }
 
         private Dictionary<string, string> GetIPDictionary()
