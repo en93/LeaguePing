@@ -1,0 +1,23 @@
+﻿<Window x:Class="LeaguePing.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LeaguePing"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="10,10,0,0" TextWrapping="Wrap" Text="League Ping Test" VerticalAlignment="Top" Height="38" Width="245" FontSize="24"/>
+        <TextBlock x:Name="label_EUW" HorizontalAlignment="Left" Margin="32,109,0,0" TextWrapping="Wrap" Text="EUW" VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="label_OCE" HorizontalAlignment="Left" Margin="32,170,0,0" TextWrapping="Wrap" Text="OCE" VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="label_NA" HorizontalAlignment="Left" Margin="32,76,0,0" TextWrapping="Wrap" Text="NA" VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="label_EUNE" HorizontalAlignment="Left" Margin="32,142,0,0" TextWrapping="Wrap" Text="EUNE" VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="label_LAN" HorizontalAlignment="Left" Margin="32,203,0,0" TextWrapping="Wrap" Text="LAN" VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="ping_EUW" HorizontalAlignment="Left" Margin="236,109,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="ping_OCE" HorizontalAlignment="Left" Margin="236,170,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="ping_NA" HorizontalAlignment="Left" Margin="236,76,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="ping_EUNE" HorizontalAlignment="Left" Margin="236,142,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+        <TextBlock x:Name="ping_LAN" HorizontalAlignment="Left" Margin="236,203,0,0" TextWrapping="Wrap" Text="..." VerticalAlignment="Top" Height="28" Width="109" FontSize="18"/>
+
+    </Grid>
+</Window>
